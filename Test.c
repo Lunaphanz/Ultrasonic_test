@@ -47,7 +47,6 @@ void delay_100ms(){
 void send_trigger(){
     PRINTF("Trigger send\n");
     GPIOD->PSOR = (1 << 2);  // set PTD2 GPIO high
-    start_receving();
     delay_10us();
     GPIOD->PCOR = (1 << 2);  // set PTD2 GPIO low
 }
